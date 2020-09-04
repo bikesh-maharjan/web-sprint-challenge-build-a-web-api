@@ -33,7 +33,7 @@ router.post("/", (req, res) => {
       res.status(201).json(es);
     })
     .catch((err) => {
-      res.status(500).json({ errorMessage: "Action could not be created." });
+      res.status(500).json({ errorMessage: "The action could not be created." });
     });
 });
 
@@ -43,17 +43,17 @@ router.put("/:id", (req, res) => {
       res.status(200).json(es);
     })
     .catch((err) => {
-      res.status(500).json({ errorMessage: "Action could not be edited." });
+      res.status(500).json({ errorMessage: " The action could not be edited." });
     });
 });
 
 router.delete("/:id", (req, res) => {
   Actions.remove(req.params.id)
     .then((es) => {
-      res.status(200).send("Action successfully deleted.");
+      res.status(200).send("The action is successfully deleted.");
     })
     .catch((err) => {
-      res.status(500).json({ errorMessage: "Action could not be deleted." });
+      res.status(500).json({ errorMessage: "The action could not be deleted." });
     });
 });
 
